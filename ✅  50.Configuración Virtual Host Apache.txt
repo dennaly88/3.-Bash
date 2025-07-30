@@ -1,0 +1,259 @@
+<!-----------------------------------------------------------------------------------------------------------|
+|------------------------------------------------------------------------------------------------------------|
+| NOMBRE    :  DANNY JOSE JIMENEZ GUTIERREZ                                                                  |
+| CEDULA    :  16.029.567                                                                                    |
+| TELEFONO  :  0424-281-44-55                                                                                |
+| CORREO    :  DENNALY88@GMAIL.COM                                                                           |
+|------------------------------------------------------------------------------------------------------------|
+|  CURSO    : TERMINAL CONSOLA  BASH                                                                         |
+|  DESARROLLADOR WEB                                                                                         |
+|  MIRANDA , CUA  2025                                                                                       |
+-------------------------------------------------------------------------------------------------------------|
+------------------------------------------------------------------------------------------------------------->
+
+
+
+#____________________________________________________________________________________________________________#
+# 50. Configuración Virtual Host                                                                             #
+#____________________________________________________________________________________________________________#
+
+# Pre-requisitos
+
+
+
+# sudo apt-get update
+# sudo apt-get install apache2
+
+# Una vez completados dichos pasos, podemos empezar.
+
+#___________________________________________________
+# Paso Uno — Crear la Estructura del Directorio
+#___________________________________________________
+
+
+# sudo mkdir -p /var/www/example.com/public_html
+# sudo mkdir -p /var/www/test.com/public_html
+
+
+#___________________________________________________
+# Paso Dos — Otorgar Permisos
+#___________________________________________________
+
+
+
+# sudo chown -R $USER:$USER /var/www/example.com/public_html
+# sudo chown -R $USER:$USER /var/www/test.com/public_html
+
+
+
+sudo chmod -R 755 /var/www
+
+#____________________________________________________________
+Paso Tres — Crear Páginas de Prueba para cada Virtual Host
+#____________________________________________________________
+
+
+
+# nano /var/www/example.com/public_html/index.html
+
+
+# /var/www/example.com/public_html/index.html
+# <html>
+#  <head>
+#    <title>¡Bienvenido a Example.com!</title>
+#  </head>
+#  <body>
+#    <h1>¡Lo lograste! El virtual host example.com está funcionando</h1>
+#  </body>
+# </html>
+
+
+
+
+# cp /var/www/example.com/public_html/index.html /var/www/test.com/public_html/index.html
+
+
+# nano /var/www/test.com/public_html/index.html
+# /var/www/example.com/public_html/index.html
+# <html>
+#  <head>
+#    <title>¡Bienvenido a Test.com!</title>
+#  </head>
+#  <body>
+#    <h1>¡Lo lograste! El virtual host test.com está funcionando</h1>
+#  </body>
+#</html>
+
+#____________________________________________________________
+Paso Cuatro — Crea un Nuevo Archivo para su Virtual Host
+#____________________________________________________________
+
+
+
+# sudo cp /etc/apache2/sites-available/000-default.conf /etc/apache2/sites-available/example.com.conf
+
+
+# sudo nano /etc/apache2/sites-available/example.com.conf
+
+
+# /etc/apache2/sites-available/example.com.conf
+# <VirtualHost *:80>
+#    ServerAdmin webmaster@localhost
+#    DocumentRoot /var/www/html
+#    ErrorLog ${APACHE_LOG_DIR}/error.log
+#    CustomLog ${APACHE_LOG_DIR}/access.log combined
+# </VirtualHost>
+
+
+
+# ServerAdmin admin@example.com
+# Después de esto, necesitamos agregar dos directivas. La primera llamada ServerName, que establece el dominio base que debe coincidir para la definición de este virtual host. Esto comúnmente es su dominio. La # segunda, llamada ServerAlias, define nombres alternativos por los cuales podría ser encontrado como alternativa al dominio base. Esto es útil para definir dominios alternativos, como www:
+
+# ServerName example.com
+# ServerAlias www.example.com
+# El único cambio restante que hay que cambiar para un archivo básico virtual host es la ubicación del documento raíz para este dominio. Ya hemos creado el directorio que necesitamos, así que solo necesitamos # alterar la directiva DocumentRoot para que refleje el directorio que hemos creado.
+
+# DocumentRoot /var/www/example.com/public_html
+# En totalidad, nuestro archivo virtual host debería verse así:
+
+# /etc/apache2/sites-available/example.com.conf
+# <VirtualHost *:80>
+#    ServerAdmin admin@example.com
+#    ServerName example.com
+#    ServerAlias www.example.com
+#    DocumentRoot /var/www/example.com/public_html
+#    ErrorLog ${APACHE_LOG_DIR}/error.log
+#    CustomLog ${APACHE_LOG_DIR}/access.log combined
+#</VirtualHost>
+
+# Guarde y cierre el archivo.
+
+# Copiar el Primer Virtual Host y Configuralo para el Segundo Dominio
+# Ahora que tenemos nuestro primer archivo virtual host establecido, podemos crear nuestro segundo archivo copiando el primero y ajustándolo como sea necesario.
+
+# Inicie copiándolo:
+
+# sudo cp /etc/apache2/sites-available/example.com.conf /etc/apache2/sites-available/test.com.conf
+# Abra el nuevo archivo con privilegios root en su editor:
+
+# sudo nano /etc/apache2/sites-available/test.com.conf
+# Ahora necesitará modificar todas las piezas de información para hacer referencia al segundo dominio. Cuando concluya, se verá algo así:
+
+# /etc/apache2/sites-available/test.com.conf
+# <VirtualHost *:80>
+#    ServerAdmin admin@test.com
+#    ServerName test.com
+#    ServerAlias www.test.com
+#    DocumentRoot /var/www/test.com/public_html
+#    ErrorLog ${APACHE_LOG_DIR}/error.log
+#    CustomLog ${APACHE_LOG_DIR}/access.log combined
+# </VirtualHost>
+
+# Guarda y cierra el archivo cuando concluyas.
+
+#_________________________________________________________
+Paso Cinco — Habilitar los Nuevos Archivos Virtual Host
+#_________________________________________________________
+
+
+# Ahora que hemos creado nuestros archivos de virtual host, debemos habilitarlos. Apache incluye algunas herramientas que nos permiten hacer esto.
+
+# Podemos usar la herramienta a2ensite para habilitar cada uno de nuestros sitios así:
+
+# sudo a2ensite example.com.conf
+# sudo a2ensite test.com.conf
+# Posteriormente, deshabilite el sitio poder defecto definido en 000-default.conf:
+
+# sudo a2dissite 000-default.conf
+# Cuando concluyas, deberá reiniciar Apache para hacer que estos cambios sean efectivos:
+
+# sudo systemctl restart apache2
+# En otra documentación, podrá encontrar un ejemplo utilizando el comando service:
+
+# sudo service apache2 restart
+# Este comando aún funciona, pero puede no mostrar la respuesta a la que está acostumbrado a ver en otros sistemas, esto debido a a que ahora es una envoltura del systemctl del systemd.
+
+#____________________________________________________________
+Paso Seis — Configure su Archivo Hosts Local (Opcional)
+#____________________________________________________________
+
+
+# Si aún no está utilizando un dominio real para probar estos procedimientos y ha utilizado un dominio ejemplo para ello, entonces puede al menos probar la funcionalidad de este proceso modificando #      # temporalmente # el archivo hosts en su computadora local.
+
+# Esto interceptará todas las solicitudes para el dominio que desea configurar y las apuntará a su VPS, como lo hace el sistema DNS con los dominios registrados. Esto funcionará solamente desde su computadora, # es simplemente útil para propósito de pruebas.
+
+# Asegúrese de realizar los siguientes pasos en su computadora local y no en su VPS. Para ello, deberá conocer la contraseña administrativa o de lo contrario al menos ser miembro del grupo administrativo.
+
+# Si estás en una Mac o una Linux PC, edite su archivo local con privilegios de administrador escribiendo:
+
+# su do nano /etc/hosts
+# Si está utilizando una Windows PC, puede encontrar las instrucciones para alterar tu archivo host aquí.
+
+# Los detalles que necesite agregar son la dirección IP pública de su VPS seguido del dominio que desea utilizar para localizar el VPS.
+
+# Para los dominios que he usado en esta guía, asumiendo que la dirección IP de mi VPS es 111.111.111.111, yo puedo agregar las siguientes líneas en la parte inferior de mi archivo hosts:
+
+# /etc/hosts
+# 127.0.0.1   localhost
+# 127.0.1.1   guest-desktop
+
+# 111.111.111.111 example.com
+# 111.111.111.111 test.com
+# Esto detectará cualquier solicitud para example.com y test.com en mi computadora y la enviará a mi servidor en 111.111.111.111. Esto es lo debemos hacer si no utilizamos un dominio real para probar nuestros # # virtual hosts.
+
+# Guarde y cierre el archivo.
+
+#____________________________________________________________
+Paso Siete — Pruebe sus Resultados
+#____________________________________________________________
+
+
+# Ahora que cuenta con sus virtual hosts configurados, puede probar su configuración fácilmente dirigiéndose a los dominios que ha configurado directamente desde su navegador web:
+
+# http://example.com
+# Deberá ver una página que luce así (el texto puede variar):
+
+# Virtual host example.com en Apache
+
+# Por otra parte, si visita la segunda página:
+
+# http://test.com
+
+
+
+
+<!-----------------------------------------------------------------------------------------------------------|
+| CARRERA   :  DESARROLLADOR                                                                                 |
+| TITULO    :  INGENIERO EN INFORMATICA                                                                      |
+------------------------------------------------------------------------------------------------------------->
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

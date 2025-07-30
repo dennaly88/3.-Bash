@@ -1,0 +1,135 @@
+<!-----------------------------------------------------------------------------------------------------------|
+|------------------------------------------------------------------------------------------------------------|
+| NOMBRE    :  DANNY JOSE JIMENEZ GUTIERREZ                                                                  |
+| CEDULA    :  16.029.567                                                                                    |
+| TELEFONO  :  0424-281-44-55                                                                                |
+| CORREO    :  DENNALY88@GMAIL.COM                                                                           |
+|------------------------------------------------------------------------------------------------------------|
+|  CURSO    : TERMINAL CONSOLA  BASH                                                                         |
+|  DESARROLLADOR WEB                                                                                         |
+|  MIRANDA , CUA  2025                                                                                       |
+-------------------------------------------------------------------------------------------------------------|
+------------------------------------------------------------------------------------------------------------->
+
+
+
+#____________________________________________________________________________________________________________#
+# 38. Configuración del Terminal                                                                             #
+#____________________________________________________________________________________________________________#
+
+
+
+cowsay -f  eyes   "DANNY JIMENEZ DESARROLLADOR WEB"
+echo
+toilet -f future Danny Jimenez --filter gay
+
+
+
+#toilet "DANNY INGENIERO EN SISTEMA" -f future --filter gay
+# Mod Terminal
+#toilet "Danny Jimenez" -f future --filter metal 
+#fortune | cowsay -f eyes | toilet --metal -f term
+# cowsay -f eyes │ lolcat
+
+
+#______________________________________________________________________#
+#   CONFIGURACION DEL TERMINAL                                         #
+#______________________________________________________________________#
+
+cowsay -f  eyes   "DANNY JIMENEZ DESARROLLADOR WEB"
+echo
+# toilet -f future Danny Jimenez --filter gay
+
+
+
+# toilet "DANNY INGENIERO EN INFORMATICA" -f future --filter gay
+# Mod Terminal
+toilet "Danny Jimenez" -f future --filter metal 
+#fortune | cowsay -f eyes | toilet --metal -f term
+# cowsay -f eyes │ lolcat
+#toilet -f mono9 -F metal Danny 
+#toilet -f future -F metal Danny
+#toilet -f emboss -F metal Danny
+#toilet -f pagga -F gay Danny 
+#toilet -f smblock -F Danny 
+#toilet -f bigascii9 -F metal Danny 
+#toilet -f ascii12 -F metal Danny
+#toilet -f mono9 -F metal Danny
+#toilet -f future -F metal 
+#toilet -f emboss -F metal VTV
+#toilet -f pagga -F metal SERVIDOR 1
+#toilet -f smblock -F metal VTV
+#toilet -f bigascii9 -F metal VTV
+#toilet -f ascii12 -F metal VTV
+#toilet -f ascii9 -F metal VTV
+#toilet -f ascii12 -F metal VTV
+#toilet -f bigascii9 -F metal VTV
+#toilet -f bigascii12 -F metal VTV
+#toilet -f bigmono9 -F metal VTV
+#toilet -f bigmono12 -F metal VTV
+#toilet -f circle -F metal VTV
+#toilet -f emboss -F metal VTV
+#toilet -f emboss -F metal VTV
+#toilet -f emboss2 -F metal VTV
+#toilet -f future -F metal VTV
+#toilet -f letter -F metal VTV
+#toilet -f mono9 -F metal VTV
+#toilet -f mono12 -F metal VTV
+#toilet -f pagga -F metal VTV
+#toilet -f smascii9 -F metal VTV
+#toilet -f smacii12 -F metal VTV
+#toilet -f circle -F metal VTV
+#toilet -f emboss -F metal VTV
+#toilet -f emboss -F metal VTV
+#toilet -f emboss2 -F metal VTV
+#toilet -f future -F metal VTV
+#toilet -f letter -F metal VTV
+#toilet -f mono9 -F metal VTV
+#toilet -f mono12 -F metal VTV
+#toilet -f pagga -F metal VTV
+#toilet -f smascii9 -F metal VTV
+#toilet -f smacii12 -F metal VTV
+#toilet -f smblock -F metal VTV
+#toilet -f smbraille -F metal VTV
+#toilet -f smmono9 -F metal VTV
+#toilet -f smmono12 -F metal VTV
+#toilet -f wideterm -F metal  VENEZOLANA DE TELEVISION C.A 
+#toilet -f future SERVICIO MEDICO  --filter border
+#toilet -f wideterm -F metal CANAL 8
+
+
+<!-----------------------------------------------------------------------------------------------------------|
+| CARRERA   :  DESARROLLADOR                                                                                 |
+| TITULO    :  INGENIERO EN INFORMATICA                                                                      |
+------------------------------------------------------------------------------------------------------------->
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,141 @@
+<!-----------------------------------------------------------------------------------------------------------|
+|------------------------------------------------------------------------------------------------------------|
+| NOMBRE    :  DANNY JOSE JIMENEZ GUTIERREZ                                                                  |
+| CEDULA    :  16.029.567                                                                                    |
+| TELEFONO  :  0424-281-44-55                                                                                |
+| CORREO    :  DENNALY88@GMAIL.COM                                                                           |
+|------------------------------------------------------------------------------------------------------------|
+|  CURSO    : TERMINAL CONSOLA  BASH                                                                         |
+|  DESARROLLADOR WEB                                                                                         |
+|  MIRANDA , CUA  2025                                                                                       |
+-------------------------------------------------------------------------------------------------------------|
+------------------------------------------------------------------------------------------------------------->
+
+
+
+#____________________________________________________________________________________________________________#
+# 44. Configuración de Grupos                                                                                #
+#____________________________________________________________________________________________________________#
+
+# El comando principal para crear un nuevo grupo es groupadd.
+
+# Para crear un grupo con la configuración predeterminada, simplemente usa:
+
+
+
+# sudo groupadd nombre_del_grupo
+
+# Opciones Comunes de groupadd:
+
+# -g o --gid: Asigna un ID de grupo (GID) específico. Si no lo especificas, el sistema asignará el siguiente GID disponible.
+
+
+
+# sudo groupadd -g 1005 equipo_dev
+# -r o --system: Crea un grupo del sistema. Los GID de los grupos del sistema suelen ser más bajos (por debajo de 1000) y se utilizan para servicios y procesos del sistema.
+
+
+
+# sudo groupadd -r grupo_servicio_web
+# Ejemplo:
+
+
+
+# sudo groupadd desarrolladores
+# sudo groupadd -g 2000 contabilidad
+# Modificación de Grupos
+# Para modificar un grupo existente, usamos el comando groupmod.
+
+# La sintaxis general es:
+
+
+
+# sudo groupmod [opciones] nombre_del_grupo_existente
+# Opciones Comunes de groupmod:
+
+# -n o --new-name: Cambia el nombre del grupo.
+
+
+
+# sudo groupmod -n nuevo_nombre_para_ventas ventas
+# -g o --gid: Cambia el ID de grupo (GID) de un grupo.
+
+
+
+# sudo groupmod -g 1006 equipo_dev
+# Precaución: Cambiar el GID de un grupo que ya tiene archivos y directorios asociados puede requerir que también cambies la propiedad de esos archivos y directorios (chgrp -R # nuevo_gid: .) para evitar problemas de permisos.
+
+
+
+# sudo groupmod -n administradores_sistema admins
+# sudo groupmod -g 1010 marketing
+
+# Eliminación de Grupos
+# Para eliminar un grupo, utilizamos el comando groupdel.
+
+
+
+# sudo groupdel nombre_del_grupo
+# Consideraciones Importantes al Eliminar Grupos:
+
+# No puedes eliminar un grupo si es el grupo primario de un usuario actualmente existente. Primero, deberás cambiar el grupo primario de ese usuario a otro grupo existente o eliminar al # usuario.
+
+# groupdel solo elimina la entrada del grupo del sistema. No afecta la propiedad de archivos que podrían haber sido creados por miembros de ese grupo. Si esos archivos tienen el GID del #  grupo eliminado, su propiedad grupal aparecerá como un GID numérico sin nombre.
+
+
+
+# sudo groupdel ventas
+# Verificación de Grupos y Pertenencia
+# Puedes verificar la existencia de grupos y sus GID en el archivo /etc/group:
+
+
+
+# cat /etc/group | grep nombre_del_grupo
+# Para ver a qué grupos pertenece un usuario, usa:
+
+
+
+# groups nombre_de_usuario
+# Para ver qué usuarios pertenecen a un grupo específico:
+
+
+
+# grep 'nombre_del_grupo' /etc/group
+
+
+
+<!-----------------------------------------------------------------------------------------------------------|
+| CARRERA   :  DESARROLLADOR                                                                                 |
+| TITULO    :  INGENIERO EN INFORMATICA                                                                      |
+------------------------------------------------------------------------------------------------------------->
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

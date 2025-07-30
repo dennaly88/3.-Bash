@@ -1,0 +1,263 @@
+<!-----------------------------------------------------------------------------------------------------------|
+|------------------------------------------------------------------------------------------------------------|
+| NOMBRE    :  DANNY JOSE JIMENEZ GUTIERREZ                                                                  |
+| CEDULA    :  16.029.567                                                                                    |
+| TELEFONO  :  0424-281-44-55                                                                                |
+| CORREO    :  DENNALY88@GMAIL.COM                                                                           |
+|------------------------------------------------------------------------------------------------------------|
+|  CURSO    : TERMINAL CONSOLA  BASH                                                                         |
+|  DESARROLLADOR WEB                                                                                         |
+|  MIRANDA , CUA  2025                                                                                       |
+-------------------------------------------------------------------------------------------------------------|
+------------------------------------------------------------------------------------------------------------->
+
+
+
+#____________________________________________________________________________________________________________#
+# 58.Log de Apache                                                                                           #
+#____________________________________________________________________________________________________________#
+
+
+
+# root@danny:/var/log/apache2#
+                                                                                                                      
+
+
+# VER TODO EN EL LOG            =   cat access.log
+
+
+# Ver las entradas más recientes  =  du -hs access.log
+
+                                                                                               
+
+# Ver registro por cantidad       =     tail -n 1 -f access.log           
+
+
+                                                      
+# Ver registros TIEMPO REAL       =     tail -f access.log             
+
+
+# FILTRAR POR HORA                =    cat access.log | grep 15:49      
+
+
+# FILTRAR POR IP                    =    cat access.log | grep 192.168.51.140     
+
+
+# FILTRAR POR METODOS                =       cat access.log.1 | grep POST   O  cat access.log.1 | grep GET    
+
+# TE MUESTRA POR PAGINACION           =  cat access.log | more
+
+                                      =   cat access.log | grep localhost | grep frame
+# CONSULTA ESPECIFICA                                                             
+                                                              
+                                      =   cat access.log | grep localhost | grep HTML | grep cuerpo
+# cat access.log | grep 192.168.51.140 > /tmp/LOGATAQUE.txt 
+
+
+
+
+
+
+       
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+     nano /etc/ssh/sshd_config 
+    /etc/init.d/ssh restart
+     nano /etc/hosts.deny 
+     nano /etc/hosts.allow 
+     /etc/init.d/apache2 status
+     apt-get install libapache2-mod-evasive
+     apachectl -M | grep evasive
+     nano /etc/apache2/mods-enabled/evasive.conf 
+     mkdir /var/log/mod_evasive
+     chown -R www-data:www-data /var/log/mod_evasive
+     systemctl restart apache2
+     /etc/init.d/apache2 statys
+    /etc/init.d/apache2 status
+     cd /usr/share/doc/libapache2-mod-evasive/examples/
+    tail -f /var/mail/www-data
+    cd /var/mail/
+    iptables -L
+    /etc/init.d/apache2 status
+    apt-get install libapache2-modsecurity
+    apachectl -M | grep security
+    ping 172.16.15.112
+    apt-get install libapache2-mod-security2
+    ping 172.16.15.112
+    apachectl -M | grep security
+    cd /etc/modsecurity/
+    cp modsecurity.conf-recommended modsecurity.conf-recommended.copia
+    mv /etc/modsecurity/modsecurity.conf-recommended /etc/modsecurity/modsecurity.conf
+    nano /etc/modsecurity/modsecurity.conf
+    systemctl restart apache2
+    sudo mv /usr/share/modsecurity-crs /usr/share/modsecurity-crs.bk
+    cd /home/administrador/
+    git clone https://github.com/SpiderLabs/owasp-modsecurity-crs.git /usr/share/modsecurity-crs
+    apt install git
+    ping github.com
+    cat /etc/resolv.conf 
+    cat /etc/netplan/50-cloud-init.yaml 
+    nano /etc/netplan/50-cloud-init.yaml 
+    netplan apply
+    nano /etc/resolv.conf 
+    git clone https://github.com/SpiderLabs/owasp-modsecurity-crs.git /usr/share/modsecurity-crs
+    cd /usr/share/modsecurity-crs
+    mv crs-setup.conf.example crs-setup.conf
+    nano /etc/apache2/mods-enabled/security2.conf
+    sudo systemctl restart apache2
+    /etc/init.d/apache2 status
+    cd /var/log/
+   tail -f modsec_audit.log 
+    cat modsec_audit.log 
+    tail -f /var/log/apache2/access.log
+    nslookup 
+    tail -f modsec_audit.log 
+    cd /etc/apache2/
+    cd /var/log/apache2/
+    tail -f modsec_audit.log
+    cat modsec_audit.log
+    cat modsec_audit.log | more
+    cat other_vhosts_access.log 
+    cat error.log
+    tail -f access.log
+    /etc/init.d/apache2 status
+   iptables -L
+   tail -f access.log
+   nano /etc/apache2/sites-available/000-default.conf 
+   cat /var/log/apache2/modsec_audit.log | more
+   cat /etc/hosts.deny 
+   cat /etc/hosts.allow 
+    nano /etc/hosts.allow 
+    tail -f /var/log/apache2/access.log
+   /etc/init.d/apache2 status
+   cd /etc/apache2/sites-available/
+   cd conf-available/
+   cd mods-enabled/
+   nano evasive.conf 
+   /etc/init.d/apache2 restart
+   apachectl -M | grep security
+   cd /var/log/apache2/
+   tail -f modsec_audit.log
+  cat modsec_audit.log | more
+  cd apache2/ 
+  cat modsec_audit.log | more
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                             
+
+
+_______________________________________________________________________
+
+VER LA ULTIMA ENTRADA 
+______________
+
+tail -n 1 access.log
+
+
+________________________________________________________________
+
+tail -f /var/log/access.log | grep "Mar  3 09:25"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-----------------------------------------------------------------------------------------------------------|
+| CARRERA   :  DESARROLLADOR                                                                                 |
+| TITULO    :  INGENIERO EN INFORMATICA                                                                      |
+------------------------------------------------------------------------------------------------------------->
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

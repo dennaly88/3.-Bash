@@ -1,0 +1,101 @@
+<!-----------------------------------------------------------------------------------------------------------|
+|------------------------------------------------------------------------------------------------------------|
+| NOMBRE    :  DANNY JOSE JIMENEZ GUTIERREZ                                                                  |
+| CEDULA    :  16.029.567                                                                                    |
+| TELEFONO  :  0424-281-44-55                                                                                |
+| CORREO    :  DENNALY88@GMAIL.COM                                                                           |
+|------------------------------------------------------------------------------------------------------------|
+|  CURSO    : TERMINAL CONSOLA  BASH                                                                         |
+|  DESARROLLADOR WEB                                                                                         |
+|  MIRANDA , CUA  2025                                                                                       |
+-------------------------------------------------------------------------------------------------------------|
+------------------------------------------------------------------------------------------------------------->
+
+
+
+#____________________________________________________________________________________________________________#
+# 33. Comandos para NGINX                                                                                    #
+#____________________________________________________________________________________________________________#
+
+
+# sudo systemctl start nginx
+
+# sudo systemctl stop nginx
+
+# sudo systemctl restart nginx
+
+# sudo systemctl reload nginx
+
+# sudo systemctl status nginx
+
+# sudo nginx -t
+
+# nginx -v
+
+# nginx -V
+
+
+
+# Directorios de configuración:
+
+# /etc/nginx/: Directorio principal de configuración.
+
+# /etc/nginx/nginx.conf: Archivo de configuración principal.
+
+# /etc/nginx/sites-available/: Aquí se guardan los archivos de configuración de tus sitios (virtual hosts).
+
+# /etc/nginx/sites-enabled/: Aquí se crean enlaces simbólicos a los archivos en sites-available para habilitar un sitio.
+
+
+
+# /var/log/nginx/access.log: Log de accesos.
+
+# /var/log/nginx/error.log: Log de errores.
+
+
+
+# sudo ln -s /etc/nginx/sites-available/nombre_de_tu_sitio.conf /etc/nginx/sites-enabled/
+
+# sudo rm /etc/nginx/sites-enabled/nombre_de_tu_sitio.conf
+
+
+
+# ps aux | grep nginx
+
+
+
+<!-----------------------------------------------------------------------------------------------------------|
+| CARRERA   :  DESARROLLADOR                                                                                 |
+| TITULO    :  INGENIERO EN INFORMATICA                                                                      |
+------------------------------------------------------------------------------------------------------------->
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
