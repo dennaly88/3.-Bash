@@ -17,30 +17,49 @@
 # 34. Comandos para Git Hub                                                                                  #
 #____________________________________________________________________________________________________________#
 
-
+################################################################
 # 1. creas primero el repositorio en la pagina de github
+################################################################
 
+#################################################################
 # 2. copias https://github.com/dennaly88/html.git
+#################################################################
 
 # git clone https://github.com/dennaly88/SISTEMAS-.git
 
 #  Clonando en 'html'...
 #  warning: Pareces haber clonado un repositorio sin contenido.
+
+#####################################################################
 # 3. copias todos los archivos a la carpeta que se creo
+#####################################################################
 
-# 4. entramos a la carpeta  danny@danny:~/Escritorio/html$
+####################################################################
+#  4. entramos a la carpeta  danny@danny:~/Escritorio/html$
+####################################################################
 
+####################################################################
 #  5. danny@danny:~/Escritorio/html$ git add -A
+####################################################################
 
+####################################################################
 #  6. danny@danny:~/Escritorio/html$ git status
+####################################################################
 
-# 7. danny@danny:~/Escritorio/html$ git commit -m 'CODIGO HTML'
+####################################################################
+#  7. danny@danny:~/Escritorio/html$ git commit -m 'CODIGO HTML'
+####################################################################
 
-# 8.danny@danny:~/Escritorio/html$ git push origin master
-#    USUARIO dennaly88@gmail.com  O dennaly88
+####################################################################
+#  8.danny@danny:~/Escritorio/html$ git push origin master
+####################################################################
 
-#  TOKEN 
+# USUARIO dennaly88@gmail.com  O dennaly88
 
+#  TOKEN ACTUALIZADO 22/03/2025 
+ 
+
+####################################################################
 
 # Clonar un Repositorio desde Github al equipo o Servidor
 
