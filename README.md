@@ -20,7 +20,6 @@
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/trello/trello-plain.svg" height="60" alt="trello logo"  />
 </div>
 
-###
 
 <div align="center">
   <img src="https://img.shields.io/static/v1?message=LinkedIn&logo=linkedin&label=&color=0077B5&logoColor=white&labelColor=&style=for-the-badge" height="25" alt="linkedin logo"  />
@@ -33,7 +32,7 @@
 
 
 <hr>
-###
+
 
 DANNY JOSE JIMENEZ GUTIERREZ
 TELEFONO :0424-281-44-55 CORREO : DENNALY88@GMAIL.COM INGENIERO EN SISTEMAS
